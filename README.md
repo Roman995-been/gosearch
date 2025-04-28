@@ -27,20 +27,20 @@ $ go install github.com/ibnaleem/gosearch@latest
 ```
 ### Unix:
 ```
-$ gosearch [username]
+$ gosearch [@artembeg14]
 ```
 ### Windows
 ```
-C:\Users\Bob> gosearch.exe [username]
+C:\Users\Bob> gosearch.exe [@artembeg14]
 ```
 ## Use Cases
 Ideally, it is best practice to run GoSearch with the `--no-false-positives` flag:
 ```
-$ gosearch -u [USERNAME] --no-false-positives
+$ gosearch -u [@artembeg14] --no-false-positives
 ```
 This will display profiles GoSearch is confident exist on a platform. GoSearch also allows you to search [BreachDirectory](https://breachdirectory.org) for compromised passwords associated with a specific username. For this, you must [obtain an API key](https://rapidapi.com/rohan-patra/api/breachdirectory) and provide it with the `-b` flag:
 ```
-$ gosearch -u [USERNAME] -b [API-KEY] --no-false-positives
+$ gosearch -u [@artembeg14] -b [API-KEY] --no-false-positives
 ```
 If GoSearch finds password hashes, it will attempt to crack them using [Weakpass](https://weakpass.com). The success rate is nearly 100%, as Weakpass uses a large wordlist of common data-wells, which align with the breaches reported by [BreachDirectory](https://breachdirectory.org). Every single password hash that's been found in [BreachDirectory](https://breachdirectory.org) has been cracked by [Weakpass](https://weakpass.com). 
 
